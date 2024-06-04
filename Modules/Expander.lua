@@ -65,7 +65,7 @@ function Expander:Refresh(fromCombat)
 			end
 		end
 
-		if Chinchilla:IsWrathClassic() then
+		if Chinchilla:IsWrathClassic() or Chinchilla:IsCataClassic() then
 			MiniMapInstanceDifficulty:Hide()
 		elseif Chinchilla:IsRetail() then
 			MiniMapInstanceDifficulty:Hide()

@@ -14,7 +14,7 @@ local frames
 
 function ShowHide:ShowFrame(frame)
 	if _G[frame] then
-		_G[frame]:SetParent( _G[frame].__origParent )
+		_G[frame]:SetParent( _G[_G[frame].__origParent] )
 	end
 end
 
@@ -37,7 +37,7 @@ function ShowHide:OnInitialize()
 			zoomOut = "MinimapZoomOut",
 			clock = "TimeManagerClockButton",
 		}
-	elseif Chinchilla:IsWrathClassic() then
+	elseif Chinchilla:IsWrathClassic() or Chinchilla:IsCataClassic() then
 		frames = {
 			north = "MinimapNorthTag",
 			map = "MiniMapWorldMapButton",

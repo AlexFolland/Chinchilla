@@ -251,7 +251,7 @@ function MoveButtons:OnInitialize()
 			zoomIn = MinimapZoomIn,
 			zoomOut = MinimapZoomOut,
 		}
-	elseif Chinchilla:IsWrathClassic() then
+	elseif Chinchilla:IsWrathClassic() or Chinchilla:IsCataClassic() then
 		buttons = {
 			difficulty = MiniMapInstanceDifficulty,
 			map = MiniMapWorldMapButton,
